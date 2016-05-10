@@ -47,6 +47,9 @@ void draw() {
   strokeWeight(1);
   stroke(0);
   rect(0, 0, 100, 100);
+  
+  fill(255-red, 255- green, 255-blue);
+  text(str(red)+ ','+str(green)+ ','+str(blue), 0,50);
 }
 void serialEvent(Serial myPort) { 
   int inByte = myPort.read(); 
@@ -57,4 +60,3 @@ void serialEvent(Serial myPort) {
   out[2] = byte(blue);
   myPort.write(out);
 } 
-
